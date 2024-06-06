@@ -3,7 +3,9 @@ stages:
   - docu
 
 build_docu:
-  image: squidfunk/mkdocs-material
+  image: 
+    name: squidfunk/mkdocs-material
+    entrypoint: ["/bin/ash"]
   stage: docu
   script:
     - mkdocs build
