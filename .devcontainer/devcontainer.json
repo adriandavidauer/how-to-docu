@@ -1,0 +1,11 @@
+{
+    "name": "mkdocs",
+    "image": "squidfunk/mkdocs-material",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ms-python.python"
+            ]
+        }
+    },
+}

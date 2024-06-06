@@ -1,0 +1,13 @@
+
+stages:
+  - docu
+
+build_docu:
+  image: squidfunk/mkdocs-material
+  stage: docu
+  script:
+    - mkdocs build
+  artifacts:
+    paths:
+      - site
+
