@@ -1,2 +1,8 @@
 site_name: My docs
+theme:
+  name: 'material'
+  palette:
+    primary: orange
+    accent: indigo
+
 
