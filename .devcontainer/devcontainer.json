@@ -1,11 +1,13 @@
 {
     "name": "mkdocs",
     "image": "squidfunk/mkdocs-material",
-    "customizations": {
-        "vscode": {
-            "extensions": [
-                "ms-python.python"
-            ]
-        }
-    },
+    // "build": {
+    //     "dockerfile": "Dockerfile",
+    //     "context": ".."
+    // },
+    "forwardPorts": [8000], // Add port forwarding
+    "postCreateCommand": "mkdocs serve --dev-addr=0.0.0.0:8000", // Start MkDocs server
+    "mounts": [
+        "source=${localEnv:HOME}/.gitconfig,target=/root/.gitconfig,type=bind"
+    ]
 }
