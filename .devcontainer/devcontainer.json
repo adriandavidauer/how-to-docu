@@ -1,13 +1,14 @@
 {
     "name": "mkdocs",
     "image": "squidfunk/mkdocs-material",
+    "mounts": [
+        "source=${localEnv:HOME}/.gitconfig,target=/root/.gitconfig,type=bind"
+    ]
     // "build": {
     //     "dockerfile": "Dockerfile",
     //     "context": ".."
     // },
-    "forwardPorts": [8000], // Add port forwarding
-    "postCreateCommand": "mkdocs serve --dev-addr=0.0.0.0:8000", // Start MkDocs server
-    "mounts": [
-        "source=${localEnv:HOME}/.gitconfig,target=/root/.gitconfig,type=bind"
-    ]
+    // "forwardPorts": [8000], // Add port forwarding
+    // "postCreateCommand": "mkdocs serve --dev-addr=0.0.0.0:8000", // Start MkDocs server
+
 }
